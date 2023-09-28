@@ -8,4 +8,8 @@ resource "google_service_account" "service_account" {
   account_id   = lookup(each.value, "account_id", null)
   display_name = lookup(each.value, "display_name", null)
   description  = lookup(each.value, "description", null)
+
+  depends_on = [
+    google_project_service.service,
+  ]
 }

@@ -17,4 +17,9 @@ resource "local_file" "service_account" {
   directory_permission = "0644"
   file_permission      = "0644"
   filename             = "${path.module}/${each.value.display_name}.json"
+
+  depends_on = [
+    google_project_service.service,
+    google_service_account.service_account,
+  ]
 }
