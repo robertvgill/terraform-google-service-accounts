@@ -11,8 +11,3 @@ variable "project_id" {
   type        = string
   default     = ""
 }
-
-variable "service_accounts" {
-  description = "Names of the service accounts to create."
-  default     = {}
-}
