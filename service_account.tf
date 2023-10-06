@@ -24,5 +24,5 @@ resource "google_service_account_iam_member" "service_account_iam" {
   role               = each.value["owner_role"]
   member             = each.value["owner_email"]
 
-  depends_on         = [google_service_account.service_account]
+  depends_on = [google_service_account.service_account]
 }
