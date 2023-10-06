@@ -9,6 +9,7 @@ locals {
         owner_email  = sa["owner_email"]
         role         = role
       }
+      if sa["create"]
     ]
   ])
 }
