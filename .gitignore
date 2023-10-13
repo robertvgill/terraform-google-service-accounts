@@ -32,3 +32,4 @@ override.tf.json
 
 # Other miscellaneous files
 *.bk
+**/keys/*

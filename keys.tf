@@ -16,7 +16,7 @@ resource "local_file" "service_account" {
   content              = base64decode(google_service_account_key.service_account[each.key].private_key)
   directory_permission = "0644"
   file_permission      = "0644"
-  filename             = "${path.module}/${each.value.display_name}.json"
+  filename             = "${path.module}/keys/${each.value.display_name}.json"
 
   depends_on = [
     google_project_service.service,
